@@ -1,0 +1,38 @@
+.registration-bg {
+    background-image: linear-gradient(rgb(89, 221, 248), rgb(255, 255, 255));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-bg {
+    background-image: linear-gradient(rgb(70, 241, 172), rgb(13, 52, 30));
+    height:100vh;
+}
+.loginBanner {
+    height:100%;
+    width: 80%;
+    margin-left: 120px;
+}
+@media screen and (max-width:998px) {
+    .loginBanner{
+        display: none;
+    }
+}
+.list {
+    list-style-type: none;
+    margin-left: 10px;
+    background-color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    color: maroon;
+    font-weight: 700;
+}
+.list:hover {
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 1000;
+}
