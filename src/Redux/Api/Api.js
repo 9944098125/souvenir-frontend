@@ -2,7 +2,8 @@ import Axios from "axios";
 
 //to set up base urlx
 const api = Axios.create({
-  baseURL: "http://localhost:5003/api/",
+  // baseURL: "http://localhost:5003/api/",
+  baseURL: "https://souvenir-node.herokuapp.com/api/",
   headers: {
     "Content-Type": "application/json",
   },

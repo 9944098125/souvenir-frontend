@@ -9,11 +9,11 @@ export const login = (data) => async (dispatch) => {
       type: LOGIN_START,
     });
     const res = await api.post("/auth/login", data);
-    // console.log('success', res)
+    console.log("success", res);
     if (res) {
       dispatch({
         type: LOGIN_SUCCESS,
-        payload: res.data.user && res.data.token,
+        payload: res.data && res.data.user,
       });
       //  console.log("dispatching", res);
     }
