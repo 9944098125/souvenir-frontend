@@ -41,7 +41,7 @@ function GetQA() {
   });
   // console.log(showEditor.dataWithId);
 
-  const [toolId, setToolId] = useState("");
+  const [toolId, setToolId] = useState("1");
 
   const onChangeToolId = (e) => {
     setToolId(e.target.value);

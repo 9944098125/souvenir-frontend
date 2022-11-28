@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
-import { Button, CircularProgress } from "@mui/material";
+import { Button } from "@mui/material";
 import UpdateQA from "./UpdateQA";
 import { Box, Stack, Typography } from "@mui/material";
 
@@ -98,6 +98,8 @@ function QAItem(props) {
               borderRadius: "8px",
               width: "150px",
               color: "red",
+              display: "flex",
+              alignItems: "center",
               mb: 2,
               ml: 3,
               p: 1,
@@ -105,10 +107,11 @@ function QAItem(props) {
               "&:hover": { background: "black" },
             }}
           >
-            {deleteQAReducer.loading && (
+            {/* {deleteQAReducer.loading && (
               <CircularProgress sx={{ height: "10px", width: "10px" }} />
-            )}
+            )} */}
             <DeleteOutlineIcon sx={{ color: "red" }} />
+            {deleteQAReducer.loading && <p className="text-white">...</p>}
           </Button>
         </Stack>
         {showEditor.id === qa._id && showEditor.boolean && (
