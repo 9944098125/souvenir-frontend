@@ -7,7 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
 import theme from "./Components/theme";
 import { BrowserRouter } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const app = express();
+app.use(express.static("reactFolderName/build"));
+app.get("*", (req, res) =>
+  res.sendFile(
+    path.resolve(__dirname, "reactFolderName", "build", "index.html")
+  )
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
