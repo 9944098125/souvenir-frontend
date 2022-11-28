@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.snow.css";
 import { createQAAction } from "./../Redux/Actions/createQAAction";
 import { useNavigate } from "react-router-dom";

@@ -1,20 +1,20 @@
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
+import React from "react";
 
-
-import CreateQA from '../Components/CreateQA';
-import Login from '../Components/Login';
-import Registration from '../Components/Registration';
-import GetQA from '../Components/GetQA';
+import CreateQA from "../Components/CreateQA";
+import Login from "../Components/Login";
+import Registration from "../Components/Registration";
+import GetQA from "../Components/GetQA";
 
 const BaseRoutes = () => {
-    return (
-        <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/register' element={<Registration />} />
-            <Route path='/get' element={<GetQA />} />
-            <Route path='/create' element={<CreateQA />} />
-        </Routes>
-    )
-}
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Registration />} />
+      <Route path="/get" element={<GetQA />} />
+      <Route path="/create" element={<CreateQA />} />
+    </Routes>
+  );
+};
 
-export default BaseRoutes
+export default BaseRoutes;
