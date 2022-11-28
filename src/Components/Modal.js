@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import { useSelector } from "react-redux";
 import CancelIcon from "@mui/icons-material/Cancel";
 import CheckCircleSharpIcon from "@mui/icons-material/CheckCircleSharp";
-import { Grid } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 
 const style = {
   position: "absolute",
