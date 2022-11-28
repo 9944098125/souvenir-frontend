@@ -2,9 +2,9 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "engines":{
-    "node":"16.16.0",
-    "npm":"8.11.0"
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "express": "^4.18.2",
     "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
