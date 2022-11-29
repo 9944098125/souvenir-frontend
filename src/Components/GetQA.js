@@ -21,8 +21,10 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import DocumentTitle from "./DocumentTitle";
 
 function GetQA() {
+  DocumentTitle("Souvenir -> Get Questions and Answers");
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const LoginDetails = useSelector((state) => state.auth);

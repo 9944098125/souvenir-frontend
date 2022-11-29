@@ -18,6 +18,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { signupAction } from "../Redux/Actions/signupAction";
 import AlertModal from "./Modal";
 import { useNavigate, Link } from "react-router-dom";
+import DocumentTitle from "./DocumentTitle";
 
 const validationSchema = yup.object({
   username: yup.string().required("Username is required"),
@@ -40,6 +41,7 @@ const validationSchema = yup.object({
 });
 
 function Registration() {
+  DocumentTitle("Souvenir -> Registration");
   const dispatch = useDispatch();
   const Navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);

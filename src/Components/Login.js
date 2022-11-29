@@ -20,6 +20,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { login } from "../Redux/Actions/loginAction";
 import AlertModal from "./Modal";
+import DocumentTitle from "./DocumentTitle";
 
 //form validations
 const validationSchema = yup.object({
@@ -35,6 +36,7 @@ const validationSchema = yup.object({
 });
 
 const Login = () => {
+  DocumentTitle("Souvenir -> Sign In");
   const [showPassword, setShowPassword] = useState(false);
 
   // Redux State:

@@ -18,8 +18,10 @@ import { createQAAction } from "./../Redux/Actions/createQAAction";
 import { useNavigate } from "react-router-dom";
 import AlertModal from "./Modal";
 import { logout } from "./../Redux/Actions/loginAction";
+import DocumentTitle from "./DocumentTitle";
 
 function CreateQA() {
+  DocumentTitle("Souvenir -> Create Question and Answer");
   const dispatch = useDispatch();
   const Navigate = useNavigate();
 
