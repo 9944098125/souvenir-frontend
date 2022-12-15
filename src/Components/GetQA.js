@@ -5,10 +5,7 @@ import AlertModal from "./Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { getQAAction } from "./../Redux/Actions/getQAAction";
 import usePagination from "./Pagination";
-import {
-  deleteQAAction,
-  deleteAllAction,
-} from "../Redux/Actions/deleteQAAction";
+import { deleteQAAction } from "../Redux/Actions/deleteQAAction";
 import { logout } from "./../Redux/Actions/loginAction";
 import Navbar from "./Navbar";
 import QAItem from "./QAItem";
@@ -108,10 +105,6 @@ function GetQA() {
     }
   }, [LoginDetails.isAuthenticated, Navigate, dispatch]);
 
-  const deleteAll = () => {
-    dispatch(deleteAllAction());
-  };
-
   const changeSearchTerm = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -127,7 +120,7 @@ function GetQA() {
           p: 5,
         }}
       >
-        <Navbar deleteAll={deleteAll} logout1={logout1} />
+        <Navbar logout1={logout1} />
         {alert.message && <AlertModal show={true} />}
         <Stack
           direction="row"

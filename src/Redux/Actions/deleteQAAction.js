@@ -36,37 +36,3 @@ export const deleteQAAction = (qaId) => async (dispatch) => {
     }, 3000);
   }
 };
-
-export const deleteAllAction = () => async (dispatch) => {
-  try {
-    dispatch({
-      type: "DELETE_ALL_START",
-    });
-    const res = await api.delete("/qa/deleteAll");
-    if (res) {
-      console.log("delete response: ", res);
-      dispatch({
-        type: "DELETE_ALL_SUCCESS",
-        payload: res.data && res.data.message,
-      });
-      dispatch(
-        alertActions.success("Deleted All Question and Answer successfully")
-      );
-      setTimeout(() => {
-        dispatch(alertActions.success_clear());
-        dispatch(alertActions.clear());
-      }, 3000);
-    }
-  } catch (err) {
-    console.log("delete error: ", err);
-    dispatch({
-      type: "DELETE_ALL_ERROR",
-      payload: err.response.message,
-    });
-    dispatch(alertActions.error("Something went wrong..."));
-    setTimeout(() => {
-      dispatch(alertActions.error_clear());
-      dispatch(alertActions.clear());
-    }, 3000);
-  }
-};

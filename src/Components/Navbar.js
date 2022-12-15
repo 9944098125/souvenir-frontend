@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 import { AppBar, Button, CssBaseline, Stack } from "@mui/material";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function Navbar({deleteAll, logout1}) {
+function Navbar({ logout1 }) {
   return (
     <Fragment>
       <CssBaseline />
@@ -50,20 +50,6 @@ function Navbar({deleteAll, logout1}) {
               "&:hover": { background: "black" },
             }}
             type="button"
-            onClick={deleteAll}
-          >
-            Delete All
-          </Button>
-
-          <Button
-            sx={{
-              width: { xs: "120px", sm: "140px", md: "180px", lg: "200px" },
-              borderRadius: "8px",
-              background: "black",
-              color: "white",
-              "&:hover": { background: "black" },
-            }}
-            type="button"
             onClick={() => logout1()}
           >
             Logout
@@ -74,4 +60,4 @@ function Navbar({deleteAll, logout1}) {
   );
 }
 
-export default Navbar
+export default Navbar;
