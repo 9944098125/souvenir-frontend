@@ -91,7 +91,7 @@ function GetQA() {
       boolean: !showEditor.boolean,
       dataWithId: { ...qa },
     });
-    // console.log("qa", showEditor.dataWithId);
+    console.log("qa", showEditor.dataWithId, qa, showEditor.boolean);
   };
 
   useEffect(() => {

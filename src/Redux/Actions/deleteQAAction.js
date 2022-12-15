@@ -56,7 +56,6 @@ export const deleteAllAction = () => async (dispatch) => {
         dispatch(alertActions.success_clear());
         dispatch(alertActions.clear());
       }, 3000);
-      window.location.reload();
     }
   } catch (err) {
     console.log("delete error: ", err);
