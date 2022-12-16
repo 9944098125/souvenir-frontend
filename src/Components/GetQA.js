@@ -76,7 +76,7 @@ function GetQA() {
 
   useEffect(() => {
     dispatch(getQAAction(userId, toolId));
-  }, [dispatch, userId, toolId, showEditor, responseData]);
+  }, [dispatch, userId, showEditor, toolId]);
 
   const deleteQA = (qaId) => {
     dispatch(deleteQAAction(qaId));
