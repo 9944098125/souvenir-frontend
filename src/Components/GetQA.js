@@ -74,13 +74,16 @@ function GetQA() {
 
   const alert = useSelector((state) => state.alert);
 
+  function deleteQA(qaId) {
+    dispatch(deleteQAAction(qaId));
+    setTimeout(() => {
+      Navigate("/create");
+    }, 0.001);
+  }
+
   useEffect(() => {
     dispatch(getQAAction(userId, toolId));
   }, [dispatch, userId, showEditor, toolId]);
-
-  const deleteQA = (qaId) => {
-    dispatch(deleteQAAction(qaId));
-  };
 
   const updateQA = (qa) => {
     setShowEditor({
