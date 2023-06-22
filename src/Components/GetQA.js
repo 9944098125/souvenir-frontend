@@ -244,21 +244,15 @@ function GetQA() {
             mt: 10,
           }}
         >
-          {questionsPaginatedData ? (
-            questionsPaginatedData
-              .currentData()
-              .map((qa, idx) => (
-                <QAItem
-                  key={idx}
-                  qa={qa}
-                  deleteQA={deleteQA}
-                  showEditor={showEditor}
-                  updateQA={updateQA}
-                />
-              ))
-          ) : (
-            <CircularProgress sx={{ fontSize: "50px" }} />
-          )}
+          {questionsPaginatedData.currentData().map((qa, idx) => (
+            <QAItem
+              key={idx}
+              qa={qa}
+              deleteQA={deleteQA}
+              showEditor={showEditor}
+              updateQA={updateQA}
+            />
+          ))}
         </Box>
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Pagination
