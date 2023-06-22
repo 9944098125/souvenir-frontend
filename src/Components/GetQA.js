@@ -17,6 +17,7 @@ import {
   Pagination,
   TextField,
   Typography,
+  CircularProgress,
 } from "@mui/material";
 import DocumentTitle from "./DocumentTitle";
 
@@ -116,7 +117,7 @@ function GetQA() {
     <Fragment>
       <Box
         sx={{
-          backgroundImage: "linear-gradient(rgb(6, 107, 65), lightgreen)",
+          // backgroundImage: "linear-gradient(rgb(6, 107, 65), lightgreen)",
           minHeight: "100vh",
           maxHeight: "100%",
           width: "100%",
@@ -243,15 +244,21 @@ function GetQA() {
             mt: 10,
           }}
         >
-          {questionsPaginatedData.currentData().map((qa, idx) => (
-            <QAItem
-              key={idx}
-              qa={qa}
-              deleteQA={deleteQA}
-              showEditor={showEditor}
-              updateQA={updateQA}
-            />
-          ))}
+          {questionsPaginatedData ? (
+            questionsPaginatedData
+              .currentData()
+              .map((qa, idx) => (
+                <QAItem
+                  key={idx}
+                  qa={qa}
+                  deleteQA={deleteQA}
+                  showEditor={showEditor}
+                  updateQA={updateQA}
+                />
+              ))
+          ) : (
+            <CircularProgress sx={{ fontSize: "50px" }} />
+          )}
         </Box>
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Pagination

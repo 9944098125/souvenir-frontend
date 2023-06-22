@@ -18,6 +18,7 @@ function QAItem(props) {
         sx={{
           background: "white",
           borderRadius: "8px",
+          boxShadow: "0 0 3px 0 grey",
           width: {
             xs: "250px",
             sm: "450px",
