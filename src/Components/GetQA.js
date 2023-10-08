@@ -58,7 +58,7 @@ function GetQA() {
   }
   // console.log(responseData, "is the res");
   const filteredData = responseData.filter((item) =>
-    item.question.toLowerCase().includes(searchTerm.toLowerCase())
+    item.question.toLowerCase().includes(searchTerm.toLowerCase()),
   );
   // console.log('filtered', filteredData)
 
@@ -221,6 +221,12 @@ function GetQA() {
             />
             <FormControlLabel
               value="8"
+              control={<Radio />}
+              label="Python"
+              sx={{ mr: { xs: 3, md: 6 } }}
+            />
+            <FormControlLabel
+              value="9"
               control={<Radio />}
               label="Others"
               sx={{ mr: { xs: 3, md: 6 } }}

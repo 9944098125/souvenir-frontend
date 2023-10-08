@@ -186,6 +186,12 @@ function CreateQA() {
               <FormControlLabel
                 value="8"
                 control={<Radio />}
+                label="Python"
+                sx={{ mr: { xs: 3, md: 6 } }}
+              />
+              <FormControlLabel
+                value="9"
+                control={<Radio />}
                 label="Others"
                 sx={{ mr: { xs: 3, md: 6 } }}
               />
